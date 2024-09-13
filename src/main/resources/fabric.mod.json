@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "antiitemframe",
+  "version": "${version}",
+  "name": "AntiItemFrame",
+  "description": "",
+  "authors": ["necek"],
+  "contact": {
+    "discord": "necekdev"
+  },
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "necek.development.antiitemframe.client.MainClient"
+    ],
+    "main": [
+      "necek.development.antiitemframe.Main"
+    ]
+  },
+  "mixins": [
+    "antiitemframe.mixins.json",
+    {
+      "config": "antiitemframe.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.8",
+    "fabric": "*",
+    "minecraft": ">=1.19.0 <1.21.0"
+  }
+}
